@@ -1,5 +1,5 @@
 # Coupon Usage Prediction
-### Python sklearn: Predict whether customers will use the coupo next month.
+### Python sklearn: Find out whom to send the coupon by predicting whether customers will use the coupon next month.
 
 ### Import packages
 ```Python
