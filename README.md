@@ -25,4 +25,5 @@ No missing value found!
 ```
 pdd.describe(include='all')
 ```
-![image](https://github.com/cassiezy/Sales_Analysis_Uniqlo/blob/master/pic/description.png)
+![image](https://github.com/cassiezy/Coupon-Usage-Prediction/blob/master/pic/description.png)
+
