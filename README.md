@@ -21,9 +21,17 @@ pdd.head()
 ```
 pdd.info()
 ```
-No missing value found!
+#### No missing value found!
 ```
 pdd.describe(include='all')
 ```
 ![image](https://github.com/cassiezy/Coupon-Usage-Prediction/blob/master/pic/description.png)
+
+#### *Notice: 1. abnormal value for age :95
+####          2. distribution of coupon_used_in_last6_monthis discrete，try binning this variable
+```
+sum(pdd.duplicated())
+```
+#### No duplicates!
+
 
