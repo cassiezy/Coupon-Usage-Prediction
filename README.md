@@ -48,6 +48,7 @@ pdd.flag.value_counts(1)
 |1    |0.116957|
 ##### 11.6% of customers used coupons before - acceptable!
 
+### Data Preparation
 #### Numeric Variable
 1. age
 ```
