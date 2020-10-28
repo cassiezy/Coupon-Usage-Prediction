@@ -183,14 +183,51 @@ pdd.groupby(['flag']).mean()
 |--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|																		
 |0	|40.524198	|2.164091	|0.259767	|0.116618	|0.228669	|0.035131	|0.027017|	0.203110	|0.039213	|0.035180|	...	|0.017979|	0.167687	|0.027308	|0.005977	|0.115500|	0.608358	|0.276142	|0.018416|	0.589067|	0.169096|
 |1	|40.301275|	1.888525|	0.540619	|0.118761	|0.136976	|0.023315|	0.018215|	0.256831|	0.066667|	0.036066	|...	|0.051730|	0.168670|	0.041530|	0.006557|	0.112568|	0.517304	|0.370128	|0.008743	|0.370856	|0.097996|
-2 rows × 21 columns
+
+#### Users who meet the following criteria are more likely to use coupons:
++ More coupons used last month
++ Didn't used too many coupons in the past six months. (More usage in the past six months means more shopping, so it's less likely for them to continue shopping this time and less likely to use coupons.)
++ No returning behavior
++ Retired/students/unemployed
++ Single people
++ Non-credit card users
 
 
 
-
-
-
-
+#### Correlation Analysis
+```
+pdd.corr()['flag'].sort_values(ascending=False)
+```
+|Variable                  |Correlation  |
+|-------   |  -------|
+|flag                        |  1.000000|
+|coupon_used_in_last_month  |   0.124839|
+|job_student                |   0.074227|
+|marital_single              |  0.066935|
+|job_retired                 |  0.043882|
+|job_management              |  0.042543|
+|job_unemployed             |   0.027318|
+|job_unknown                 |  0.002414|
+|job_admin.                 |   0.002150|
+|job_self-employed          |   0.001547|
+|job_technician              |  0.000848|
+|marital_divorced           |  -0.002960|
+|age                          |-0.007172|
+|job_housemaid              |  -0.017829|
+|job_entrepreneur             |-0.021087|
+|job_services                | -0.023711|
+|default_yes                  |-0.023920|
+|marital_married              |-0.059833|
+|loan_yes                     |-0.062380|
+|coupon_used_in_last6_month  | -0.067464|
+|job_blue-collar              |-0.071575|
+|returned_yes                | -0.141774|
+```
+q1=['coupon_used_in_last_month', 'job_student', 'marital_single','job_retired','job_management','job_unemployed',
+    'marital_married','loan_yes','coupon_used_in_last6_month','job_blue-collar','returned_yes']
+sns.heatmap(pdd[q1].corr())
+```
+![image](https://github.com/cassiezy/Coupon-Usage-Prediction/blob/master/pic/5.png)
 
 
 
