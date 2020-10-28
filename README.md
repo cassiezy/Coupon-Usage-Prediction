@@ -21,4 +21,8 @@ pdd.head()
 ```
 pdd.info()
 ```
-no missing value
+No missing value found!
+```
+pdd.describe(include='all')
+```
+![image](https://github.com/cassiezy/Sales_Analysis_Uniqlo/blob/master/pic/description.png)
